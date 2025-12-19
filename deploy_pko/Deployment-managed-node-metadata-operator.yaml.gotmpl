@@ -17,6 +17,8 @@ spec:
         name: managed-node-metadata-operator
     spec:
       serviceAccountName: managed-node-metadata-operator
+      securityContext:
+        runAsNonRoot: true
       affinity:
         nodeAffinity:
           preferredDuringSchedulingIgnoredDuringExecution:

@@ -21,6 +21,5 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GO111MODULE=on go build -mod=mod -a -o
 FROM registry.access.redhat.com/ubi9/ubi-minimal:9.7-1764794109
 WORKDIR /
 COPY --from=builder /workspace/manager .
-USER nonroot:nonroot
 
 ENTRYPOINT ["/manager"]
