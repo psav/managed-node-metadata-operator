@@ -33,7 +33,7 @@ spec:
         effect: NoSchedule
       containers:
       - name: managed-node-metadata-operator
-        image: '{{ .config.image }}'
+        image: {{.config.image}}
         args:
         - --leader-elect
         command:
